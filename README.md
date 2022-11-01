@@ -3,11 +3,11 @@
 
 ## Overview
 ---
-**Build A Bet** is a webpage application powered by dynamic ```JavaScript``` via a "back-end" structure utilizing ```REACT.js``` with dependencies on ```MongoDB``` for data storage and queries. Additionally, the client-side will feature a user-friendly and intuitive experience by incorporating an ```HTML``` back-bone strongly supported by the ```REACT.js``` technology.
+**Build A Bet** is a webpage application powered by dynamic ```JavaScript``` via a "back-end" structure utilizing ```REACT.js``` with dependencies on ```MongoDB```, ```Mongoose```, ```GraphQL```, and ```Apollo``` for data maintenance, storage and queries. Additionally, the client-side will feature a user-friendly and intuitive experience by incorporating an ```HTML``` back-bone strongly supported by the ```REACT.js``` build technology.
 
-This application allows users to access game-odds for sports and build their own parlay picks linked to their own user accounts. Furthermore, the site will feature security token technology in order to ensure safe transactions and secured data.
+This application allows users to access game-odds for sports and build their own parlay picks linked to their own user accounts. Furthermore, the site will feature secure login technology via ```JSONwebtokens``` combined with ```Bcrypt``` password encryption ,in order to ensure safe transactions and secured data.
 
-Overall, **Build A Bet**  follows the ```MERN``` concept referencing "full-stack" development with a ```JavaScript``` powered "back-end" and a dynamic "front-end" rendered using ```REACT.js```. All of these combined languages and processes create the unique user experience while visiting the application's pages deployed via ```GitHUB```. 
+Overall, **Build A Bet**  follows the ```MERN``` concept referencing "full-stack" development with a ```JavaScript``` powered "back-end" and a dynamic "front-end" rendered using ```REACT.js```. All of these combined languages and processes create the unique user experience while visiting the application's pages deployed via ```Heroku```. 
 
 ## Table of Contents
 ---
@@ -54,7 +54,12 @@ THEN I can see all of my parlays
 ----
 > **Important:** Once, the source code has been cloned from the repository @https://github.com/AASports89/build-a-bet
 
- Enter the following to initiate the required application package installations & run process:
+ Enter the following to initiate the required application package installations, seeding, & run process:
+
+ ```
+ npm run seed
+ ```
+ -followed by-
 
  ```
  npm run install concurrently
@@ -87,11 +92,11 @@ THEN I can see all of my parlays
 
 * Jonathan  L. - Styled & coded ```Pages``` sections, ```Home```, ```Login``` & ```Sign Up``` functionalities.
 
-*  Rence S. - Helped with styling.
+*  Rence S. - Helped with styling, and with various other components throughout the application.
 
 ## Deployed Application
 ---
-> https://TBD.com
+> https://build-a-bet.herokuapp.com/
 
 ## GitHUB Repository
 ---
