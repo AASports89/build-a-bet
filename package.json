@@ -4,13 +4,8 @@
   "description": "A user-friendly web-application designed to assist users in having fun creating their own sports parlays, powered via React.js, MongoDB, GraphQL, and Apollo",
   "main": "server/server.js",
   "scripts": {
-    "start" : "node app.js",
-    "predeploy": "npm run build",
-    "build": "react-scripts build",
-    "deploy": "gh-pages -d build",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
+    "start": "react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
