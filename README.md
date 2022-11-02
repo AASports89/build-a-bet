@@ -78,11 +78,11 @@ THEN I can see all of my parlays
 ---
 > **Note:**  The following animation shows the application's look and functionality:
 
-> **Application Look:** !["**Build A Bet** features an intuitive & user-friendly UI as demonstrated in the following GIF."](./client/images/build-a-bet.gif)
+> **Application Look:** !["**Build A Bet** features an intuitive & user-friendly UI as demonstrated in the following GIF."](./images/build-a-bet.gif)
 
-> **Dashboard:** !["The user has access to a dashboard tool that organizes all of the user associated data & renders easy access."](./client/images/Dashboard.png)
+> **Dashboard:** !["The user has access to a dashboard tool that organizes all of the user associated data & renders easy access."](./images/Dashboard.png)
 
-> **Sign Up:** !["Any user is able to create a new account via **Build A Bet** sign up page, which is user-friendly & intuitive."](./client/images/Sign%20Up.png)
+> **Sign Up:** !["Any user is able to create a new account via **Build A Bet** sign up page, which is user-friendly & intuitive."](./images/Sign%20Up.png)
 
 ## Contributions
 ---
