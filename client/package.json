@@ -1,6 +1,5 @@
 {
   "name": "client",
-  "homepage": "https://myusername.github.io/build-a-bet",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
@@ -19,9 +18,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start" : "node app.js",
-    "predeploy": "npm run build",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
