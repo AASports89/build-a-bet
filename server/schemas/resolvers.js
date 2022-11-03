@@ -3,7 +3,7 @@ const { User, Game, Parlay } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
-  
+//PULL MODEL DATA//
   Query: {
     users: async () => {
       return User.find().populate('parlays');
@@ -31,8 +31,9 @@ const resolvers = {
       throw new AuthenticationError("Please login❗⛔");
     },
   },
-
+//CHANGE MODEL DATA//
   Mutation: {
+//CREATE USER//
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
@@ -42,27 +43,27 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('Error❗⛔ No user found with this email address❗⛔');
+        throw new AuthenticationError('Error❗⛔ No user found with this login❗⛔');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Error❗⛔ Invalid login entered❗⛔');
+        throw new AuthenticationError('Error❗⛔ Invalid login credentials❗⛔');
       }
 
       const token = signToken(user);
 
       return { token, user };
     },
-
+//ADD PARLAY//
     addParlay: async (parent, { win_choice }, context) => {
       if(context.user) {
         const parlay = await Parlay.create({ 
           win_choice,
           username: context.user.username,
         });
-        //TODO Update to properly push each game to the set
+
       await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { parlays: parlay._id, username: context.user.username } },
@@ -75,7 +76,7 @@ const resolvers = {
       }
       throw new AuthenticationError("Error❗⛔ Please login to set parlay❗⛔");
     },
-
+//ADD GAME//
     addGame: async (parent, { parlayId, homeTeam, awayTeam, homeOdd, awayOdd }, context) => {
       if (context.user) {
         return Parlay.findOneAndUpdate(
@@ -93,7 +94,7 @@ const resolvers = {
       }
       throw new AuthenticationError("Error❗⛔ Please login to set parlay❗⛔");
     },
-
+//DELETE PARLAY//
     removeParlay: async (parent, { parlayId }, context) => {
       if(context.user) {
         const parlay = await Parlay.findOneAndDelete({
@@ -107,12 +108,9 @@ const resolvers = {
         );
         return parlay;
       }
-      throw new AuthenticationError("Error❗⛔ Please login to set parlay❗⛔");
+      throw new AuthenticationError("Error❗⛔ Please login to delete parlay❗⛔");
     },
-    // addGame: async (parent, {homeTeam, awayTeam, homeOdd, awayOdd}) => {
-    //   const game = await Game.create({homeTeam, awayTeam, homeOdd, awayOdd});
-    //   return game;
-    // },
+//DELETE GAME//
     removeGame: async (parent, { parlayId, gameId }, context) => {
       if (context.user) {
         return Parlay.findOneAndUpdate(

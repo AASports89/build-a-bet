@@ -974,7 +974,7 @@ a:hover {
   margin: 2%;
   padding: 0.75%;
   text-decoration: none;
-  font-size: 135%;
+  font-size: 115%;
   border-radius: 0.5rem;
   border: 1px solid whitesmoke;
   color: whitesmoke;
@@ -1286,6 +1286,8 @@ label form [type='radio'] {
 #links {
   margin-left: 40%;
   margin-top: -3%;
+  width: 100%;
+  margin-bottom: 1%;
 }
 
 #title {
@@ -1617,6 +1619,9 @@ label form [type='radio'] {
   color: whitesmoke;
   font-weight: bold;
   margin-top: 2%;
+  border-radius: 0.5em;
+  margin: 1%;
+  margin-top: 3%;
 }
 
 #log {
@@ -1624,13 +1629,11 @@ label form [type='radio'] {
   border-radius: 0.25em;
 }
 
-/* #user-image {
-  border: 1.5px solid whitesmoke;
-  border-radius: 6em;
-  width: 15%;
-  margin-left: 80%;
-  margin-top: -2%;
-} */
+#alert {
+  font-weight: bold;
+  border: 1.5px solid red;
+  border-radius: 1em;
+}
 
 @media only screen and (max-width: 1100px) {
   .card {

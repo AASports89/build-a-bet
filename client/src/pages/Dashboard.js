@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import ParlayList from '../components/ParlayList';
 import ParlayForm from '../components/ParlayForm';
@@ -12,8 +11,7 @@ const Dashboard = () => {
     if (loading) {
       return <div>Loading...💸...</div>;
     }
-
-
+    
   return (
   <main>
       <div className="flex-row justify-center">

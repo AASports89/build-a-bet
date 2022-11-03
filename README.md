@@ -84,6 +84,8 @@ THEN I can see all of my parlays
 
 > **Sign Up:** !["Any user is able to create a new account via **Build A Bet** sign up page, which is user-friendly & intuitive."](./images/Sign%20Up.png)
 
+> **Mobile-Device View:** !["Build A Bet is mobile-device responsive, allowing users to access the application from almost any type of device."](./images/mobile-resp.png)
+
 ## Contributions
 ---
 * Aram A. - Coded back-end ```Components```, ```TypeDefs```, ```HandleSubmit``` form & numerous ```index.css``` classes and register for the ```ODDS-API``` key to pull live betting odds.

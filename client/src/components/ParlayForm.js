@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import { QUERY_PARLAYS, QUERY_ME, QUERY_USER } from '../utils/queries';
@@ -11,7 +11,6 @@ function ParlayForm() {
   const [awayTeam, setAway] = useState(' ');
   const [homeOdd, setHOdd] = useState(' ');
   const [awayOdd, setAOdd] = useState(' ');
-  const [game, setGame] = useState(' ');
   
   const { username, user } = useParams();
   const { loading, data } = useQuery(username ? QUERY_USER : QUERY_ME, QUERY_PARLAYS, {
@@ -30,9 +29,6 @@ const ticketId = Math.floor(Math.random() * (15005) + 1);
   }
     const handleSetPick = event => {
       setPick(event.target.value)
-    };
-    const handleSetGame = event => {
-      setGame(event.target.value)
     };
     const handleSetHome = event => {
       setHome(event.target.value)
